@@ -48,3 +48,57 @@ echoでのクッキーの設定・読み取り方法
 削除
 
 クッキーにMaxAge -1を設定しそのクッキーを書き込むと削除される
+
+
+
+## Request
+
+* 送られてきたリクエストの値をどのように取得するか
+
+1.  専用の構造体を作成しておき、json時、form時、url query時それぞれに関してどのような名前で取得されるかを定義する
+2. c (echo.Context)からBindをを使用すると自動で取得してくれる
+   * formの場合はFormValueを使うと取得できる
+
+
+
+## Routing
+
+* ルーティングの方法
+
+e(echo class)にメソッド(get,post,put,delete,updateなど)をつけるとルートができる
+
+```go
+e.GET("/hello",some_handler)
+e.method(route,handler)
+
+e.Any(route,handler)
+e.Match([methods],route,handler)
+```
+
+* echoではそれ以外にもどのメソッドでも受け付けるAnyや幾つかのメソッドを受け付けるMatchを使うこともできる
+
+
+
+* echoでのハンドラー関数は echo.Contextを受け取りerrorを返すものが定義されている
+* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
