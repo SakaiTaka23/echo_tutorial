@@ -79,8 +79,43 @@ e.Match([methods],route,handler)
 
 
 
-* echoでのハンドラー関数は echo.Contextを受け取りerrorを返すものが定義されている
-* 
+**パラメーター**
+
+* パラメーターを使ったルーティングもすることができる
+
+* *を使用することによりあらゆる値がマッチするようになる
+
+  /users/1/files/	/users/1/files/hi	/users/1/files/ok/wo/1 ...
+
+```go
+// param
+e.GET("/users/:id", func(c echo.Context) error {
+	return c.String(http.StatusOK, "/users/:id")
+})
+
+// static
+e.GET("/users/new", func(c echo.Context) error {
+	return c.String(http.StatusOK, "/users/new")
+})
+
+// match any
+e.GET("/users/1/files/*", func(c echo.Context) error {
+	return c.String(http.StatusOK, "/users/1/files/*")
+})
+
+```
+
+* このような順番で記述した場合であってもechoではstatic→param→match anyの順番で変換される
+
+
+
+**URI Building?**
+
+あまりわからなかった
+
+
+
+* ルートの出力もできる
 
 
 

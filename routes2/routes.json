@@ -1,0 +1,132 @@
+[
+  {
+    "method": "POST",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "PUT",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "GET",
+    "path": "/inline/name",
+    "name": "get-user"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "HEAD",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "POST",
+    "path": "/name",
+    "name": "create-user"
+  },
+  {
+    "method": "GET",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "TRACE",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "GET",
+    "path": "/users/:id",
+    "name": "main.main.func1"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "GET",
+    "path": "/users/1/files/*",
+    "name": "main.main.func3"
+  },
+  {
+    "method": "CONNECT",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "OPTIONS",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "PATCH",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/admin",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  },
+  {
+    "method": "GET",
+    "path": "/users",
+    "name": "main.users"
+  },
+  {
+    "method": "GET",
+    "path": "/users/new",
+    "name": "main.main.func2"
+  },
+  {
+    "method": "PROPFIND",
+    "path": "/admin/*",
+    "name": "github.com/labstack/echo.(*Group).Use.func1"
+  }
+]

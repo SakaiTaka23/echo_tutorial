@@ -34,7 +34,6 @@ func main() {
 	e.Any("/any", func(c echo.Context) error {
 		return c.String(http.StatusOK, "any")
 	})
-	// エラーが出る
 	e.Match([]string{"GET", "POST"}, "/match", findUser)
 
 	e.POST("/users", createUser)
