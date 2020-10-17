@@ -119,7 +119,13 @@ e.GET("/users/1/files/*", func(c echo.Context) error {
 
 
 
+## ErrorHandling
 
+* あまり挙動がわからない
+
+* デフォルトではエラーが出てきた時メッセージが返ってくるだけ
+
+  →それをカスタムすることができる？
 
 
 
