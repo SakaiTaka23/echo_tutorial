@@ -7,7 +7,7 @@
 - [x] Error Handling
 - [x] Migration 移行方法
 - [x] Request
-- [ ] Response
+- [x] Response
 - [x] Routing
 - [ ] Static Files
 - [x] Templates
@@ -66,6 +66,19 @@ echoでのクッキーの設定・読み取り方法
 1.  専用の構造体を作成しておき、json時、form時、url query時それぞれに関してどのような名前で取得されるかを定義する
 2. c (echo.Context)からBindをを使用すると自動で取得してくれる
    * formの場合はFormValueを使うと取得できる
+
+
+
+## Response
+
+* ハンドラーからの返り値として文字列、**html、json、xml、csv、png、それ以外のファイルも**返すことができる
+
+*  同じ内容でもいくつかの返信方法がある。
+  * Blob:バイナリデータをそれぞれの形に変換して返す？
+  * Stream:大きいものに有効 一行で返す
+  * Pretty:綺麗に整形させたものを返す
+* Context#Redirect(code int, url string) でリダイレクトもできる(ステータスコードは200!?)
+* Hooks?リスポンス前後に処理？
 
 
 
