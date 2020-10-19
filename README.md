@@ -1,21 +1,18 @@
 # echo_tutorial
 
+- [x] Installation 完了
+- [ ] Customization
+- [ ] Context
+- [x] Cookies
+- [x] Error Handling
+- [x] Migration 移行方法
+- [x] Request
+- [ ] Response
+- [x] Routing
+- [ ] Static Files
+- [x] Templates
+- [ ] Testing
 
-
-## templates
-
-echoでのハンドラーからテンプレートを返す方法
-
-1. TemplateRenderを作成
-2. Render実装　公式の方のifはいらなさそう
-3. main関数の時点でテンプレートをプリコンパイル、echoクラスのRenderにプリコンパイルしたものを入れる
-
-実際に使う時はハンドラーでc.Renderを返す。引数は ステータス、テンプレート、返すデータ　となっている。テンプレートにはテンプレート内で定義した名前が使用できる。
-
-```go
-{{ define "header" }}
-{{ end }}
-```
 
 
 
@@ -48,6 +45,17 @@ echoでのクッキーの設定・読み取り方法
 削除
 
 クッキーにMaxAge -1を設定しそのクッキーを書き込むと削除される
+
+
+
+## ErrorHandling
+
+* あまり挙動がわからない
+
+* デフォルトではエラーが出てきた時メッセージが返ってくるだけ
+
+  →それをカスタムすることができる？
+
 
 
 
@@ -119,13 +127,29 @@ e.GET("/users/1/files/*", func(c echo.Context) error {
 
 
 
-## ErrorHandling
 
-* あまり挙動がわからない
+## Templates
 
-* デフォルトではエラーが出てきた時メッセージが返ってくるだけ
+echoでのハンドラーからテンプレートを返す方法
 
-  →それをカスタムすることができる？
+1. TemplateRenderを作成
+2. Render実装　公式の方のifはいらなさそう
+3. main関数の時点でテンプレートをプリコンパイル、echoクラスのRenderにプリコンパイルしたものを入れる
+
+実際に使う時はハンドラーでc.Renderを返す。引数は ステータス、テンプレート、返すデータ　となっている。テンプレートにはテンプレート内で定義した名前が使用できる。
+
+```go
+{{ define "header" }}
+{{ end }}
+```
+
+
+
+
+
+
+
+
 
 
 
