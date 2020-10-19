@@ -1,8 +1,8 @@
 # echo_tutorial
 
 - [x] Installation 完了
-- [ ] Customization
-- [ ] Context
+- [x] Customization カスタム
+- [x] Context
 - [x] Cookies
 - [x] Error Handling
 - [x] Migration 移行方法
