@@ -140,6 +140,38 @@ e.GET("/users/1/files/*", func(c echo.Context) error {
 
 
 
+## Static Files
+
+echoで静的ファイルを扱う方法
+
+* ルーティングの段階で静的ファイルの場所を定義する
+
+```go
+					ルート				実際の場所
+e.Static("/static", "assets")
+
+e.File("/favicon.svg", "images/favicon.svg")
+e.File("/", "public/index.html")
+```
+
+Staticでは使用するファイル（js,css)をFileではファイルを返す場合(html)、faviconを返す場合に使用
+
+**テンプレート側から使用する場合もルートを書いて取得する**
+
+```html
+<script src='static/main.js'></script>
+```
+
+実際のmain.jsの場所は assets/main.js
+
+
+
+
+
+
+
+
+
 
 ## Templates
 
