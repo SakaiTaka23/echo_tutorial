@@ -9,9 +9,9 @@
 - [x] Request
 - [x] Response
 - [x] Routing
-- [ ] Static Files
+- [x] Static Files
 - [x] Templates
-- [ ] Testing
+- [x] Testing
 
 
 
@@ -167,12 +167,6 @@ Staticでは使用するファイル（js,css)をFileではファイルを返す
 
 
 
-
-
-
-
-
-
 ## Templates
 
 echoでのハンドラーからテンプレートを返す方法
@@ -190,21 +184,23 @@ echoでのハンドラーからテンプレートを返す方法
 
 
 
+## Testing
 
+流れ自体は他の言語と同じ
 
+* 試しに値を入れそれが変えるべき値と同じかどうかテストする
 
+**実行方法**
 
+1. ハンドラーが*.goの場合テストは\*_test.goとする
 
+2. テストは
 
+   ````shell
+   go test -v
+   ````
 
-
-
-
-
-
-
-
-
+   で実行
 
 
 
