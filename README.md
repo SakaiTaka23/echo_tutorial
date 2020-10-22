@@ -1,5 +1,9 @@
 # echo_tutorial
 
+
+
+## Guide
+
 - [x] Installation 完了
 - [x] Customization カスタム
 - [x] Context
@@ -203,6 +207,31 @@ echoでのハンドラーからテンプレートを返す方法
    で実行
 
 
+
+## Middleware
+
+- [ ] Basic Auth
+- [ ] Body Dump
+- [ ] Body Limit
+- [ ] Casbin Auth
+- [ ] CORS
+- [ ] CSRF
+- [ ] Gzip
+- [ ] Jaeger
+- [ ] JWT
+- [ ] Key Auth
+- [ ] Logger
+- [ ] Method Override
+- [ ] Primetheus
+- [ ] Proxy
+- [ ] Recover
+- [ ] Redirect
+- [ ] Request ID
+- [ ] Rewrite
+- [ ] Secure
+- [ ] Session
+- [ ] Static
+- [ ] Trailing Slash
 
 
 
