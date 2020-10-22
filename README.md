@@ -211,7 +211,7 @@ echoでのハンドラーからテンプレートを返す方法
 ## Middleware
 
 - [x] Basic Auth
-- [ ] Body Dump
+- [x] Body Dump
 - [ ] Body Limit
 - [ ] Casbin Auth
 - [ ] CORS
@@ -242,4 +242,14 @@ echoでのハンドラーからテンプレートを返す方法
 ## Basic Auth
 
 * ベーシック認証
+
+
+
+## Body Dump
+
+* デバッグ・ログ確認用　
+* リクエストが飛んできた時にrequest body,response bodyを表示させることができる
+* いずれかの値が大きい時(ファイルや画像を大量に送る時？)は例外処理をしておくこと
+
+
 
