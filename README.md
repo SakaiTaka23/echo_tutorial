@@ -210,7 +210,7 @@ echoでのハンドラーからテンプレートを返す方法
 
 ## Middleware
 
-- [ ] Basic Auth
+- [x] Basic Auth
 - [ ] Body Dump
 - [ ] Body Limit
 - [ ] Casbin Auth
@@ -235,5 +235,11 @@ echoでのハンドラーからテンプレートを返す方法
 
 
 
+* ミドルウェアはグループとして登録することによってそれを使うもの、使わないものを分けることができる
 
+
+
+## Basic Auth
+
+* ベーシック認証
 
