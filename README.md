@@ -212,7 +212,7 @@ echoでのハンドラーからテンプレートを返す方法
 
 - [x] Basic Auth
 - [x] Body Dump
-- [ ] Body Limit
+- [x] Body Limit
 - [ ] Casbin Auth
 - [ ] CORS
 - [ ] CSRF
@@ -257,4 +257,12 @@ echoでのハンドラーからテンプレートを返す方法
 
 * request bodyの容量を制限することができる
 * リミットを超えた場合 413エラーを返す
+
+
+
+## Cabin Auth
+
+* わからない
+* どのような種類の認証なのかがわかっておらず、sampleも動かない
+* みた感じgoのcasbinというパッケージをechoでも使いやすいようにカスタマイズしたもの？
 
