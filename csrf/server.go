@@ -53,13 +53,14 @@ func main() {
 	e.Renderer = renderer
 
 	e.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{
-		TokenLookup: "header:X-XSRF-TOKEN",
+		// TokenLookup: "header:X-XSRF-TOKEN",
+		TokenLookup: "form:csrf",
 	}))
 
 	e.GET("/csrf", csrf)
 	e.GET("/form", func(c echo.Context) error {
 		return c.Render(http.StatusOK, "form.html", map[string]interface{}{
-			"csrf":c.Get("csrf"),
+			"csrf": c.Get("csrf"),
 		})
 	})
 	e.POST("/form", check)
