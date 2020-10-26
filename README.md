@@ -216,17 +216,17 @@ echoでのハンドラーからテンプレートを返す方法
 - [ ] Casbin Auth
 - [ ] CORS
 - [ ] CSRF
-- [ ] Gzip
-- [ ] Jaeger
-- [ ] JWT
+- [ ] Gzip データを圧縮するのに使われる？ファイルもできそう？
+- [ ] Jaeger 文さんトレーシングシステム？
+- [x] JWT
 - [ ] Key Auth
-- [ ] Logger
-- [ ] Method Override
-- [ ] Primetheus
-- [ ] Proxy
-- [ ] Recover
-- [ ] Redirect
-- [ ] Request ID
+- [x] Logger
+- [ ] Method Override メソッドのオーバーライド　POSTのみ可能
+- [x] Primetheus
+- [x] Proxy プロキシの設定ができる
+- [x] Recover
+- [x] Redirect
+- [x] Request ID
 - [ ] Rewrite
 - [ ] Secure
 - [ ] Session
@@ -277,4 +277,79 @@ echoでのハンドラーからテンプレートを返す方法
 ## CSRF
 
 * csrfトークン
-* 
+* なぜか認証が失敗する
+
+
+
+## JWT
+
+* ログインに使用できる
+
+* デフォルトではユーザー名、パスワードのみを含むがカスタムをすることもできる
+
+  →これをフォーム用にカスタムすることもできそう？
+
+
+
+* ログインの手順
+
+  1. loginのルートに入りjwtトークンを受け取る
+  2. 認証が必要なルートに対して毎回そのトークンを送り確認、返答をする
+
+  * この時 1.から直接ロブインページに送ることできる？
+  * クッキーにjwtのトークンを保存しておけば良さそう？
+
+
+
+## Logger
+
+* ミドルウェアに追加するだけでログが流れるようになる
+
+```go
+	e.Use(middleware.Logger())
+```
+
+* フォーマットの指定もできる
+
+```go
+e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
+  Format: "method=${method}, uri=${uri}, status=${status}\n",
+}))
+```
+
+
+
+## Primetheus
+
+* 追加するとhttp requestの詳細を受け取ることができる？
+
+```go
+    p := prometheus.NewPrometheus("echo", nil)
+```
+
+
+
+## Recover
+
+* 追加することでパニックを回避しエラーを出させることができる
+* ログを吐くのでエラーが出たときに追跡することができる
+
+```go
+	e.Use(middleware.Recover())
+```
+
+
+
+## Redirect
+
+* ハンドラーから別のルートへリダイレクトするものではなく根本的にurlの一部を変えるために使用される
+
+例 httpをhttpsに置き換え、wwwがついていない場合に追加、それらの組み合わせ
+
+
+
+## Request id
+
+* 毎回のリクエストに対してユニークなidを割り振る
+* 場所はリスポンスのヘッダー部に追加される
+
