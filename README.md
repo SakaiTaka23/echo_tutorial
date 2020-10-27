@@ -210,32 +210,35 @@ echoでのハンドラーからテンプレートを返す方法
 
 ## Middleware
 
-- [x] Basic Auth
-- [x] Body Dump
-- [x] Body Limit
-- [ ] Casbin Auth
-- [ ] CORS
-- [ ] CSRF
-- [ ] Gzip データを圧縮するのに使われる？ファイルもできそう？
-- [ ] Jaeger 文さんトレーシングシステム？
-- [x] JWT
-- [ ] Key Auth
-- [x] Logger
-- [ ] Method Override メソッドのオーバーライド　POSTのみ可能
-- [x] Primetheus
-- [x] Proxy プロキシの設定ができる
-- [x] Recover
-- [x] Redirect
-- [x] Request ID
-- [x] Rewrite
-- [x] Secure
-- [x] Session
-- [x] Static
-- [x] Trailing Slash
+| Middleware      | 重要度(1~3) | やったか |
+| --------------- | ----------- | -------- |
+| Basic Auth      | 2           | ◯        |
+| Body Dump       | 3           | ◯        |
+| Body Limit      | 3           | ◯        |
+| Casbin Auth     | ?           |          |
+| CORS            | ?           |          |
+| CSRF            | 3           | △        |
+| Gzip            | ?           |          |
+| Jaeger          | ?           |          |
+| JWT             | 3           | ◯        |
+| Key Auth        | ?           |          |
+| Logger          | 3           | ◯        |
+| Method Override | ?           |          |
+| Prometheus      | 3?          | ◯        |
+| Proxy           | 2           | ◯        |
+| Recover         | 3?          | ◯        |
+| Redirect        | 3           | ◯        |
+| Request ID      | 2           | ◯        |
+| Rewrite         | 3           | ◯        |
+| Secure          | 3           | ◯        |
+| Session         | 3           | ◯        |
+| Static          | 3           | ◯        |
+| Trailing Slash  | 2           | ◯        |
 
 
 
 * ミドルウェアはグループとして登録することによってそれを使うもの、使わないものを分けることができる
+* デバッグ用のミドルウェアも多い
 
 
 
