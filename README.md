@@ -227,11 +227,11 @@ echoでのハンドラーからテンプレートを返す方法
 - [x] Recover
 - [x] Redirect
 - [x] Request ID
-- [ ] Rewrite
-- [ ] Secure
-- [ ] Session
-- [ ] Static
-- [ ] Trailing Slash
+- [x] Rewrite
+- [x] Secure
+- [x] Session
+- [x] Static
+- [x] Trailing Slash
 
 
 
@@ -353,3 +353,48 @@ e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
 * 毎回のリクエストに対してユニークなidを割り振る
 * 場所はリスポンスのヘッダー部に追加される
 
+* ヘッダーに追加されるみたいだがヘッダーを出力させても表示が見えない
+
+  →postmanのヘッダーでは確認することができる
+
+* ログインなしで乱数を生成したい時に使えそう？
+
+
+
+## Rewrite
+
+* urlを書き直すことができる
+* 長いurlを短く変換したり条件を絞る時に使える
+
+
+
+## Secure
+
+* インジェクション攻撃から守ってくれる？
+
+
+
+## Session
+
+* セッション基本的にクッキーと併用
+
+
+
+## Static
+
+* 静的ファイルの場所を指定することができる
+* 指定することによってルート指定を短縮させることができる
+
+例 staticを静的ファイルルートに指定→/js/main.jsにリクエストがあった場合static/js/main.jsを取得する
+
+
+
+## Trailing Slash
+
+* url末尾の/を取り除くか含むかを指定することができる
+
+* 末尾のスラッシュがあるかないかでルートが変わってくる
+
+  →トレイリングスラッシュをつけてリクエストを送りそのルートがない場合404が帰ってくる
+
+* これを使うことによりそれらを統一することができる
