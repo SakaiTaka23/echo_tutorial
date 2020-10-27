@@ -226,7 +226,7 @@ echoでのハンドラーからテンプレートを返す方法
 | Method Override | ?           |          |
 | Prometheus      | 3?          | ◯        |
 | Proxy           | 2           | ◯        |
-| Recover         | 3?          | ◯        |
+| Recover         | 3           | ◯        |
 | Redirect        | 3           | ◯        |
 | Request ID      | 2           | ◯        |
 | Rewrite         | 3           | ◯        |
