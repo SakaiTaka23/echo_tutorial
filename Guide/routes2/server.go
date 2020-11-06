@@ -35,10 +35,18 @@ func main() {
 	g := e.Group("/admin")
 	g.Use(middleware.BasicAuth(func(username, password string, c echo.Context) (bool, error) {
 		if username == "joe" && password == "secret" {
-			return true,c.String(http.StatusOK, "basic auth ok")
+			return true, c.String(http.StatusOK, "/admin")
 		}
 		return false, nil
 	}))
+
+	g.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "/admin/")
+	})
+
+	g.GET("/get", func(c echo.Context) error {
+		return c.String(http.StatusOK, "/admingroup")
+	})
 
 	// ルート名
 	route := e.POST("/name", func(c echo.Context) error {

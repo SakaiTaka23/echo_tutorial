@@ -53,8 +53,8 @@ func main() {
 	e.Renderer = renderer
 
 	e.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{
-		// TokenLookup: "header:X-XSRF-TOKEN",
-		TokenLookup: "form:csrf",
+		TokenLookup: "header:X-XSRF-TOKEN",
+		//TokenLookup: "form:csrf",
 	}))
 
 	e.GET("/csrf", csrf)
